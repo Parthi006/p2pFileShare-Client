@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import io from "socket.io-client";
 import { createReceiverPeer } from "../utils/peer";
 
-const socket = io("https://file-share-kohl.vercel.app");
+const socket = io("https://p2pfileshare-server.onrender.com");
 
 export default function Receiver() {
   const [roomId, setRoomId] = useState("");
