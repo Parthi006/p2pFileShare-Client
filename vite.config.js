@@ -7,7 +7,9 @@ export default defineConfig({
   plugins: [react()],
     define: {
     global: "globalThis",
-    "process.env": {}, // ✅ Fix: Prevent `process is not defined`
+    "process.env": {
+      NODE_ENV: '"production"',
+    },
   },
   optimizeDeps: {
     esbuildOptions: {
