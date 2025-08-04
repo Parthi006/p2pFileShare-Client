@@ -4,6 +4,9 @@ import Sender from "./components/Sender";
 import Receiver from "./components/Receiver";
 window.global ||= window;
 
+import process from "process";
+window.process = process;
+
 export default function App() {
   const [role, setRole] = useState(null);
 
