@@ -5,6 +5,10 @@ import { NodeGlobalsPolyfillPlugin } from "@esbuild-plugins/node-globals-polyfil
 
 export default defineConfig({
   plugins: [react()],
+    define: {
+    global: "globalThis",
+    "process.env": {}, // ✅ Fix: Prevent `process is not defined`
+  },
   optimizeDeps: {
     esbuildOptions: {
       define: {
