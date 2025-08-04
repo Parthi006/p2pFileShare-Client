@@ -8,7 +8,7 @@ export default defineConfig({
     define: {
     global: "globalThis",
     "process.env": {
-      NODE_ENV: JSON.stringify(process.env.NODE_ENV || "https://p2pfileshare-server.onrender.com"),
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV || "production"),
     },
   },
   optimizeDeps: {
